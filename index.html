@@ -1,18 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AMA - Advanced Mood Analyzer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ama - Advanced Mood Analyzer</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #E91E63; } /* AMA Pink */
+        :root {
+            --primary: #E91E63; /* Your App Pink */
+            --bg: #F5F5F7;      /* Apple Light Gray */
+            --text: #1D1D1F;    /* Apple Dark Text */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 20px 40px;
+            max-width: 700px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #E91E63, #FF8A80);
+            border-radius: 28px; /* iOS Icon Shape */
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 15px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: var(--primary);
+        }
+
+        p.subtitle {
+            font-size: 24px;
+            color: #86868B;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        /* APP STORE BUTTON */
+        .download-btn {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn svg {
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* MOCKUP PLACEHOLDER */
+        .mockup-area {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 300px;
+            height: 500px; /* Represents phone height */
+            background: white;
+            border-radius: 40px;
+            border: 8px solid #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            margin-bottom: 60px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            font-size: 13px;
+            color: #86868B;
+            border-top: 1px solid #E5E5E5;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>ama</h1>
-    <p>Advanced Mood Analyzer</p>
-    <p>Coming soon to the App Store.</p>
-    <br>
-    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a>
+
+    <section class="hero">
+        <div class="app-icon">❤️</div>
+        
+        <h1>ama</h1>
+        <p class="subtitle">Master Your Love Life.<br>Stop guessing. Get the psychological edge.</p>
+
+        <a href="#" class="download-btn">
+            <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 66.2 23.9 149.4 66.1 210.6 28.3 40.9 59.8 79.7 94 77.2 27.6-2 37.8-18.7 75.3-18.7 36.9 0 46.9 18.7 75.9 18.2 56.4-1.2 87.8-59.5 88.5-60.8-1.5-.6-53.6-28.9-54.1-81.3zM255 103.9c19-25.5 32.1-55.8 28.5-88.2-27.3 2.1-55.8 17.6-73.7 39.8-16.1 20-30.7 51.6-27.1 82.3 30.6 3.1 57.6-11.9 72.3-33.9z"/></svg>
+            Download on the App Store
+        </a>
+    </section>
+
+    <div class="mockup-area">
+        App Screen Preview
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Leonardo Ferhati. All rights reserved.</p>
+        <br>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:support@ama-app.com">Contact Support</a>
+    </footer>
+
 </body>
 </html>
