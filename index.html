@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ama — Advanced Mood Analyzer</title>
+    
+    <link rel="icon" type="image/svg+xml" href="ama_icon.svg">
+    <link rel="apple-touch-icon" href="ama_icon.svg">
+
     <style>
         :root {
             --primary: #E91E63;
@@ -44,24 +48,24 @@
             text-align: center;
         }
 
-        /* UPDATED APP ICON LOGIC */
+        /* UPDATED APP ICON: BIGGER & FULL OCCUPANCY */
         .app-icon {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary), #ff5e95);
-            border-radius: 22px; /* iOS Squircle */
+            width: 120px; /* Increased size */
+            height: 120px;
+            background: transparent; /* Removed pink background */
+            border-radius: 26px; /* Adjusted for larger size to keep squircle vibe */
             margin-bottom: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.25);
-            overflow: hidden; /* Ensures SVG doesn't bleed out */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
         }
 
         .app-icon img {
-            width: 70%; /* Adjust to 100% if your SVG has its own padding */
-            height: 70%;
-            object-fit: contain;
+            width: 100%; /* Full occupancy */
+            height: 100%;
+            object-fit: cover; /* Ensures it fills the squircle perfectly */
         }
 
         .hero h1 {
