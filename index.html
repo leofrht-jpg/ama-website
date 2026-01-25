@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ama — Advanced Mood Analyzer</title>
     
-    <link rel="icon" type="image/svg+xml" href="ama_icon.svg">
-    <link rel="apple-touch-icon" href="ama_icon.svg">
+    <link rel="icon" type="image/png" href="ama_icon.png">
+    <link rel="apple-touch-icon" href="ama_icon.png">
 
     <style>
         :root {
@@ -48,12 +48,12 @@
             text-align: center;
         }
 
-        /* UPDATED APP ICON: BIGGER & FULL OCCUPANCY */
+        /* ICON: 120px, Full Occupancy, PNG optimized */
         .app-icon {
-            width: 120px; /* Increased size */
+            width: 120px; 
             height: 120px;
-            background: transparent; /* Removed pink background */
-            border-radius: 26px; /* Adjusted for larger size to keep squircle vibe */
+            background: transparent; 
+            border-radius: 26px; /* High-radius squircle */
             margin-bottom: 30px;
             display: flex;
             align-items: center;
@@ -63,9 +63,10 @@
         }
 
         .app-icon img {
-            width: 100%; /* Full occupancy */
+            width: 100%; 
             height: 100%;
-            object-fit: cover; /* Ensures it fills the squircle perfectly */
+            object-fit: cover; /* Ensures PNG fills the area without gaps */
+            display: block;
         }
 
         .hero h1 {
@@ -302,7 +303,7 @@
     <div class="container">
         <section class="hero">
             <div class="app-icon">
-                <img src="ama_icon.svg" alt="ama icon">
+                <img src="ama_icon.png" alt="ama icon">
             </div>
             <h1>Unlock the Tea.</h1>
             <p class="tagline">The Advanced Mood Analyzer for the digital generation. Stop the spiral, start the vibe check.</p>
