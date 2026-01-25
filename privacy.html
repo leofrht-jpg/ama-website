@@ -3,30 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ama</title>
+    <title>Privacy Policy — ama</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #E91E63; }
-        h2 { margin-top: 30px; }
-        a { color: #E91E63; text-decoration: none; }
-        .back-link { display: inline-block; margin-bottom: 30px; color: #666; font-size: 14px; }
+        :root {
+            --primary: #E91E63;
+            --bg: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1D1D1F;
+            --text-secondary: #86868B;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius-pill: 40px;
+            --radius-card: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* BACK BUTTON */
+        .nav-header {
+            margin-bottom: 60px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .btn-back:hover {
+            transform: translateX(-5px);
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: 48px;
+            letter-spacing: -0.03em;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            color: var(--text-main);
+        }
+
+        p {
+            font-size: 18px;
+            color: #424245;
+        }
+
+        /* CONTENT CARDS */
+        .policy-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #d2d2d7;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Home</a>
-    
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> January 24, 2026</p>
 
-    <p>Your privacy is important to us. "ama - Advanced Mood Analyzer" is designed to respect your data.</p>
+    <div class="container">
+        <header class="nav-header">
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </header>
 
-    <h2>1. Data Collection</h2>
-    <p>We do not store your chat data on our servers. All analysis is performed using on-device intelligence or secure, transient cloud processing where no data is permanently stored.</p>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Effective Date: January 25, 2026</p>
 
-    <h2>2. Analytics</h2>
-    <p>We use anonymous analytics to improve the app performance. No personally identifiable information is attached to this data.</p>
+        <p>At <strong>ama</strong>, we believe your personal business should stay exactly that—personal. We’ve built our tech to ensure you can analyze the vibe without compromising your data.</p>
 
-    <h2>3. Contact Us</h2>
-    <p>If you have any questions, please contact us at <a href="mailto:support@ama-app.com">support@ama-app.com</a>.</p>
+        <section class="policy-card">
+            <h2>1. Zero-Storage Policy</h2>
+            <p>Your chats are your own. We do <span class="highlight">not store</span> your messages, screenshots, or uploaded text on our servers. Analysis is performed through secure, transient processing that wipes data the moment your "Vibe Check" is complete.</p>
+        </section>
+
+        <section class="policy-card">
+            <h2>2. On-Device Intelligence</h2>
+            <p>Wherever possible, <strong>ama</strong> uses Apple's Neural Engine to process "Red Flag Detection" directly on your iPhone. This means the data never even leaves your device.</p>
+        </section>
+
+        <section class="policy-card">
+            <h2>3. Analytics & Improvement</h2>
+            <p>We collect anonymous metadata (like crash reports or feature usage) to make the app better. This data is <span class="highlight">never linked</span> to your identity or your psychological insights.</p>
+        </section>
+
+        <section class="policy-card">
+            <h2>4. Contact Us</h2>
+            <p>Questions about your data? Our support team is ready to clear things up. Reach out at <a href="mailto:support@ama-app.com">support@ama-app.com</a>.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Leonardo Ferhati. All rights reserved.</p>
+        </footer>
+    </div>
+
 </body>
 </html>

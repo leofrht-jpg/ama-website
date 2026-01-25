@@ -3,30 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use - ama</title>
+    <title>Terms of Use — ama</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #E91E63; }
-        h2 { margin-top: 30px; }
-        a { color: #E91E63; text-decoration: none; }
-        .back-link { display: inline-block; margin-bottom: 30px; color: #666; font-size: 14px; }
+        :root {
+            --primary: #E91E63;
+            --bg: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1D1D1F;
+            --text-secondary: #86868B;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius-pill: 40px;
+            --radius-card: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* NAVIGATION */
+        .nav-header { margin-bottom: 60px; }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .btn-back:hover { transform: translateX(-5px); }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: 48px; letter-spacing: -0.03em; margin-bottom: 10px; }
+        .subtitle { color: var(--text-secondary); margin-bottom: 40px; }
+        h2 { font-size: 22px; margin-top: 30px; border-bottom: 1px solid #e5e5e7; padding-bottom: 10px; }
+        
+        /* CONTENT BLOCKS */
+        .terms-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .ai-notice {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .ai-notice::after {
+            content: "IMPORTANT";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; color: #424245; }
+        
+        .highlight { color: var(--primary); font-weight: 600; }
+
+        footer {
+            margin-top: 80px;
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid #d2d2d7;
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← Back to Home</a>
-    
-    <h1>Terms of Use (EULA)</h1>
-    
-    <h2>1. Acceptance of Terms</h2>
-    <p>By downloading or using the app, these terms will automatically apply to you.</p>
 
-    <h2>2. Subscriptions</h2>
-    <p>Some parts of the service are billed on a subscription basis ("Pro Access"). You will be billed in advance on a recurring and periodic basis (such as weekly or yearly).</p>
+    <div class="container">
+        <header class="nav-header">
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </header>
 
-    <h2>3. AI Disclaimer</h2>
-    <p>The advice provided by "ama" is for entertainment and informational purposes only. It does not replace professional psychological advice.</p>
-    
-    <h2>4. Changes to This Agreement</h2>
-    <p>We reserve the right to modify these terms at any time.</p>
+        <h1>Terms of Use</h1>
+        <p class="subtitle">Standard End User License Agreement (EULA)</p>
+
+        <section class="terms-card">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading <strong>ama</strong>, you agree to these terms. If you're here to use our "Vibe Checks" or "Red Flag Detection," you're acknowledging that this app is a tool to help you navigate relationships, but you remain the captain of your own ship.</p>
+        </section>
+
+        <section class="terms-card ai-notice">
+            <h2>2. AI-Powered Features & Privacy</h2>
+            <p>Our advanced insights use AI to analyze sentiment. Here is the deal:</p>
+            <ul>
+                <li><strong>Optional:</strong> AI features are disabled by default. You choose when to "Unlock the Tea."</li>
+                <li><strong>Transient:</strong> When AI is used, data is transmitted securely, processed instantly, and <span class="highlight">never permanently stored</span>.</li>
+                <li><strong>No Profiling:</strong> We don't build a "dating profile" of you or sell your chat patterns to advertisers. Period.</li>
+            </ul>
+        </section>
+
+        <section class="terms-card">
+            <h2>3. Local Processing</h2>
+            <p>Basic stats, usage patterns, and standard summaries are processed 100% locally on your device. This data never touches a server.</p>
+        </section>
+
+        <section class="terms-card">
+            <h2>4. Subscriptions (Pro Access)</h2>
+            <p>Access to "Relationship Court" and unlimited "Vibe Checks" requires a subscription. Payments are handled via the Apple App Store. You can cancel anytime in your Settings—no "delulu" hidden fees here.</p>
+        </section>
+
+        <section class="terms-card">
+            <h2>5. Disclaimer</h2>
+            <p><strong>ama</strong> provides psychological <em>insights</em>, not <em>medical diagnoses</em>. We are an entertainment and informational tool. If you are in a serious or harmful situation, please consult a professional therapist or counselor.</p>
+        </section>
+
+        <section class="terms-card">
+            <h2>6. Compliance</h2>
+            <p>We operate under strict GDPR and CCPA principles: data minimization, purpose limitation, and total user transparency.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 MALE partners. All rights reserved.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
