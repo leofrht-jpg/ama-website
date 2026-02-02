@@ -52,7 +52,7 @@
             width: 128px; 
             height: 128px;
             background: #fff; 
-            border-radius: 28px; /* Smooth iOS squircle */
+            border-radius: 28px;
             margin-bottom: 30px;
             box-shadow: 0 20px 40px rgba(233, 30, 99, 0.25);
             overflow: hidden; 
@@ -106,7 +106,7 @@
             box-shadow: 0 20px 30px rgba(0,0,0,0.2);
         }
 
-        /* FEATURES GRID */
+        /* FEATURES (MODES) GRID */
         .section-header {
             text-align: center;
             margin: 100px 0 50px;
@@ -114,37 +114,80 @@
 
         .section-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.02em; }
         
-        .features {
+        /* Grid adapted for 3 main items */
+        .modes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
             padding-bottom: 80px;
         }
 
-        .card {
+        .mode-card {
             background: var(--card-bg);
-            padding: 32px;
+            padding: 36px 32px;
             border-radius: var(--radius-card);
             box-shadow: var(--shadow);
             text-align: left;
             transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
-        .card:hover { transform: translateY(-8px); }
+        .mode-card:hover { transform: translateY(-8px); }
         
-        .card h3 { 
-            font-size: 20px; 
-            margin-top: 0; 
-            color: #1D1D1F; 
-            font-weight: 700;
+        .mode-icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+            background: #F5F5F7;
+            width: 80px;
+            height: 80px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .mode-card h3 { 
+            font-size: 24px; 
+            margin: 0 0 12px 0;
+            color: #1D1D1F; 
+            font-weight: 700;
         }
         
-        .card p { font-size: 16px; color: var(--text-secondary); margin-bottom: 0; }
+        .mode-card p { 
+            font-size: 17px; 
+            color: var(--text-secondary); 
+            margin-bottom: 24px; 
+            line-height: 1.5;
+        }
+
+        /* Feature list inside cards */
+        .vibe-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .vibe-list li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #424245;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .vibe-list li span {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .vibe-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+        }
 
         /* COURT MODE SECTION */
         .court-section {
@@ -261,32 +304,50 @@
                 <img src="ama_icon.png" alt="ama iOS icon">
             </div>
             <h1>The truth is in<br>the texts.</h1>
-            <p class="tagline">Stop guessing if they like you. Export your chat, get a full Vibe Check, and let AI decide who's actually winning the relationship.</p>
-            <a href="#" class="btn-download">Download on App Store</a>
+            <p class="tagline">Stop guessing. Export your chat, choose your mode, and let AI reveal the hidden dynamics of your relationships.</p>
+            <a href="https://apps.apple.com/app/id6758580161" class="btn-download">Download on App Store</a>
         </section>
 
         <div class="section-header">
-            <h2>Decode Your Data</h2>
-            <p style="color: var(--text-secondary);">Your gut feeling is cute. Our data is better.</p>
+            <h2>3 Modes. 3 Vibe Checks.</h2>
+            <p style="color: var(--text-secondary);">Because a "dry text" means something different in a Group Chat vs. a Date.</p>
         </div>
 
-        <section class="features">
-            <div class="card">
-                <h3>⚖️ Who Cares More?</h3>
-                <p>We analyze response times and initiative. Find out if you're the one always texting first (ouch).</p>
+        <section class="modes-grid">
+            
+            <div class="mode-card">
+                <div class="mode-icon">💘</div>
+                <h3>Romantic</h3>
+                <p>Is it love or love-bombing? We analyze the chemistry and safety of your romantic threads.</p>
+                <ul class="vibe-list">
+                    <li><span>Reciprocity:</span> Are you carrying the convo?</li>
+                    <li><span>Romanticism:</span> Flirtation & chemistry levels.</li>
+                    <li><span>Green Flags:</span> Consistency & emotional safety.</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>❤️ The Spark Meter</h3>
-                <p>Dry texting or true chemistry? We measure the emotional depth of every single message.</p>
+
+            <div class="mode-card">
+                <div class="mode-icon">🐍</div>
+                <h3>Friendship</h3>
+                <p>Real friends vs. snakes. We focus on loyalty, support, and hidden toxicity.</p>
+                <ul class="vibe-list">
+                    <li><span>Hype Factor:</span> Do they gas you up?</li>
+                    <li><span>Real Talk:</span> Vulnerability vs. surface level memes.</li>
+                    <li><span>Loyalty:</span> Snake behavior detection.</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>🚩 Red Flag Scanner</h3>
-                <p>Love bombing? Gaslighting? Our AI spots the toxic traits you might be missing.</p>
+
+            <div class="mode-card">
+                <div class="mode-icon">📢</div>
+                <h3>Group Chat</h3>
+                <p>Analyze the chaos. Who is the Main Character and who is just an NPC?</p>
+                <ul class="vibe-list">
+                    <li><span>Main Character Energy:</span> Who runs the chat?</li>
+                    <li><span>Chaos Meter:</span> Unhinged takes & entropy.</li>
+                    <li><span>Unity:</span> Do plans happen or is it all talk?</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>📈 The Forecast</h3>
-                <p>Are you heading for a breakup or a ring? See the trend line of your relationship.</p>
-            </div>
+
         </section>
 
         <section class="court-section">
